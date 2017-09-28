@@ -2,9 +2,9 @@ const Request = require("./request");
 const http = require("http");
 
 class Xzhttp {
-    constructor(call = ()=>{}) {
+    constructor(call) {
         this.links = {};
-        this.call = call;
+        this.call = call || ()=>{};
     }
     
     link(path, func) {
