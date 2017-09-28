@@ -4,7 +4,11 @@ const http = require("http");
 class Xzhttp {
     constructor(call) {
         this.links = {};
-        this.call = call || ()=>{};
+        if (typeof (call) == 'function') {
+            this.call = call;
+        } else {
+            this.call = function () {void 0}
+        }
     }
     
     link(path, func) {
