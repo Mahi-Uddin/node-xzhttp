@@ -1,6 +1,6 @@
 {
   "name": "xzhttp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple http framework",
   "main": "index.js",
   "scripts": {
