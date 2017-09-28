@@ -9,7 +9,7 @@ class Request {
         this.path = this.url.pathname;
         this.reply = {
             headers:{
-                "content-type": "text/plain"
+                "content-type": "text/html"
             },
             status:200,
             body:[]
