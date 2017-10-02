@@ -17,7 +17,8 @@ class Request {
     }
     
     addData(data) {
-        this.reply.body.push(data);
+        this.reply.body.push((typeof(data)==="string") ?
+        data : JSON.stringify(data));
         return this;
     }
     
@@ -30,6 +31,11 @@ class Request {
     
     addHeader(name, val) {
         this.reply.headers[name] = val;
+        return this;
+    }
+    
+    setType(type) {
+        this.reply.headers["content-type"] = type;
         return this;
     }
     
