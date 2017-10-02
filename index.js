@@ -14,9 +14,9 @@ class Xzhttp {
     handle(req, res) {
         var Reqh = new Request (req, res);
         
-        if (App.links[Reqh.path]) {
+        if (this.links[Reqh.path]) {
             //if it is registered
-            App.links[Reqh.path](Reqh);
+            this.links[Reqh.path](Reqh);
         } else {
             //404
             res.statusCode = 404;
