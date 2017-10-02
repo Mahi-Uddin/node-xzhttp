@@ -2,8 +2,12 @@ const Request = require("./request");
 const http = require("http");
 
 class Xzhttp {
+
     constructor() {
-        this.links = {};
+        this.links = {
+            "/": (r)=>{
+            r.addData("Powered By: <a href='https://github.com/Xzlash/node-xzhttp'>Xzhttp</a>").send()}
+        };
     }
     
     link(path, func) {
